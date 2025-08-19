@@ -1,4 +1,5 @@
 from django.shortcuts import render
+
 def home(request):
     context = {
         'page_title': 'Home',
@@ -12,6 +13,7 @@ def about(request):
         'message': 'เกี่ยวกับฉัน'
     }
     return render(request, 'about.html', context)
+
 def contact(request):
     context = {
         'page_title': 'Contact Us',
@@ -23,7 +25,6 @@ def forPage(request):
     context = {}
     context['count'] = list(range(1, 11))
     context['message'] = 'วนซ้ำข้อมูลใน Django'
-    
     if request.method == 'POST':
         number = request.POST.get('count')
         try:
@@ -33,5 +34,5 @@ def forPage(request):
             context['count'] = list(range(1, 2))
     else:
         context['count'] = list(range(1, 11))
-    
     return render(request, 'for.html', context)
+
