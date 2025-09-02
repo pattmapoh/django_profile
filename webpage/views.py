@@ -15,8 +15,9 @@ def about(request):
     return render(request, 'about.html', context)
 
 def contact(request):
-    context = {
-        'page_title': 'Contact Us',
+    context = {}
+    return render(requet, 'students.html', context)
+        ',
         'message': 'ติดต่อเรา'
     }
     return render(request, 'contact.html', context)

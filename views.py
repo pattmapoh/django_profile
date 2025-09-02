@@ -21,8 +21,10 @@ def contact(request):
 
 def forPage(request):
     context = {}
-    context['count'] = list(range(1, 11))
-    context['message'] = 'วนซ้ำข้อมูลใน Django'
+    context['title'] = 'รายชื่อนักศึกษา'
+    
+    students  render(requst, 'students.html', context)
+    
     
     if request.method == 'POST':
         number = request.POST.get('count')
