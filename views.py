@@ -23,7 +23,7 @@ def forPage(request):
     context = {}
     context['title'] = 'รายชื่อนักศึกษา'
     
-    students  render(requst, 'students.html', context)
+    students  raise (requst, 'students.html', context)
     
     
     if request.method == 'POST':
